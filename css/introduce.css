@@ -1,0 +1,133 @@
+html,body{font-family: 'KaiTi'!important;}
+body {
+    background: linear-gradient(to top,#dbeebc 20%,#fff 100%);
+}
+*,*::before,*::after{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container{width:84%;}
+/*------------------nav----------------------*/
+.container-fluid{background-color: #dbeebc;height:8em!important;}
+button.navbar-toggle{
+    background-color:#c1d600;
+}
+button.navbar-toggle .icon-bar{background-color:white;}
+.navbar-collapse{
+    margin-top:1.8em!important;
+    font-size:1.6em;
+    margin-right:3em!important;
+}
+.navbar-collapse ul li{text-align: center;}
+.navbar-collapse ul li a{color:#006834;}
+.navbar-collapse ul li a:hover{background-color:#dbeebc;}
+.navbar-brand > img{margin-left: 5em!important;}
+.dropdown-menu > li > a{color:#006834;font-size: 1.3em;}
+
+/*-------------------content------------------*/
+.content{
+    margin-top:9em;
+    overflow: hidden;
+    height:72em;
+    position: relative;
+}
+.content .one{
+    margin:0 0 0 50px;
+    width:440px;
+    height:580px;
+    float:right;
+}
+.content .one img{
+    float:left;
+    width:180px;
+    height:180px;
+}
+.content .one img:hover{
+    transform:rotate(360deg) scale(0.8,0.8);
+    transition:all 600ms ;
+}
+.content .one h2{color:#81a843;margin-top:70px;}
+.content .one p{
+    text-indent:2em;
+    color:#006834;
+    font-size: 18px;
+    float:left;
+    padding:20px 20px;
+}
+.content .two{
+    width:600px;
+    height:580px;
+    float:right;
+    margin-right:40px;
+}
+.content .two img{
+    margin:10px 10px;
+    transform:scale(1);
+    transition:all 400ms ease-in;
+}
+.content .two img:hover{
+    transform:scale(0.8);
+    transition:all 400ms ease-in;
+}
+.content .three{
+    float:left;
+    margin-left:10px;
+}
+.content .three a{color:#006834;}
+.content .four{
+    float:right;
+    width:590px;
+    height:400px;
+}
+.content .four img{
+    margin:20px 10px;
+    transform:scale(0.8);
+    transition:all 400ms ease-in;
+}
+.content .four img:hover{
+    transform:scale(1.2);
+    transition:all 400ms ease-in;
+}
+
+/*------------------------footer---------------------*/
+.footer{
+    height:15em;
+    margin:0 auto;
+}
+.footer .logo{
+    width:17%;
+    margin-top:1em;
+    float:left;
+}
+.footer .logo img.footer_logo{display: block;}
+.footer .logo span{
+    color:#006834;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.footer .center{
+    width:71%;
+    float:left;
+    margin-top:2em;
+}
+.footer .center ul li{
+    float:left;
+    width:20%;
+    text-align: center;
+}
+.footer .center ul li h3{
+    font-size: 1.3em;
+    color:#006834;
+}
+.footer .center ul li p a{
+    font-size: 1em;
+    color:#006834;
+}
+.footer .center ul li p a:hover{
+    text-decoration: underline;
+}
+.footer .erweima{
+    margin-top:1em;
+    width:12%;
+    float:right;
+}

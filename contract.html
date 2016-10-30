@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>加入“肉萌萌”</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/contract.css"/>
+    <script src="js/rotate.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script type="text/javascript">
+        function isName(){
+            var name=document.getElementById('name').value;
+            if(name!=""){
+                document.getElementById('nameinfo').innerHTML='<font color="green" size="4">符合规则</font>';
+                return true;
+            } else
+                document.getElementById('nameinfo').innerHTML='<font color="red" size="4">请正确输入您的名字</font>';
+                return false;
+        }
+
+        function isTel(){
+            var reg2=/^1[3,5,7,8]\d{9}$/;
+            var str2=document.getElementById('tel').value;
+            if(reg2.test(str2)){
+                document.getElementById('telinfo').innerHTML='<font color="green" size="4">符合规则</font>';
+                return true;
+            } else
+                document.getElementById('telinfo').innerHTML='<font color="red" size="4">请正确输入您的手机号码</font>';
+                return false;
+        }
+
+        function isEmail(){
+            var reg3=/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+            var str3=document.getElementById('email').value;
+            if(reg3.test(str3)==true){
+                document.getElementById('emailinfo').innerHTML='<font color="green" size="4">符合规则</font>';
+                return true;
+            } else
+                document.getElementById('emailinfo').innerHTML='<font color="red" size="4">请正确输入您的邮箱格式</font>';
+                return false;
+        }
+
+
+        function check(){
+                if(isEmail() && isName() && isTel()){
+                    if (confirm("提交表单?")) {
+                        alert('恭喜你，提交成功啦 ^0^ ');
+                        }
+                }else{
+
+                   alert('提交失败 π_π');
+                }
+         }
+    </script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar  navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="index.html">首页<img src="images/nav1.png" alt=""/></a></li>
+                    <li><a href="product.html">多肉家族<img src="images/nav2.png" alt=""/></a></li>
+                    <li><a href="article.html">多肉故事<img src="images/nav3.png" alt=""/></a></li>
+                    <!--<li><a href="news.html">多肉趣闻<img src="images/nav6.png" alt=""/></a></li>-->
+                    <li><a href="introduce.html">多肉俱乐部<img src="images/nav4.png" alt=""/></a></li>
+                    <li><a href="contract.html">联系我们<img src="images/nav5.png" alt=""/></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="story">
+            <ul>
+                <li class="about">
+                    <h3>关于“肉萌萌”</h3>
+                    <p>如果你也像我一样对待多肉有一种独特而微妙的情感，如果你也谈起多肉来头头是道，如果你也看到多肉
+                        就走不动道，如果你对多肉的种植养护方法烂熟于心......这些都可以让你成为一家多肉小馆的理由。
+                        在这里，我们不仅需要技术支持，更多的是需要您的一颗对待多肉的温暖而安静的心。</p>
+                    <p>除了您的喜爱之外，您还得确信自己是个内心安宁，情感柔和的惜肉者，愿意用自己对待多肉的
+                        耐心和善意对待每一个顾客，并相信自己能够将多肉的美丽和效能更好的
+                        展示给大众，传播健康和愉悦是一项值得尝试并长期坚持的事业，欢迎你
+                        加入我们，并和我们分享所有的成就和欣然。</p>
+                    <a href="#">肉萌萌<img src="images/to.png" alt=""/></a>
+                </li>
+                <li class="store">
+                    <div id="stage"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="map">
+        <div class="form">
+            <div class="head"><img src="images/join1.png" alt=""/><strong><span>加入"肉萌萌"</span></strong></div>
+            <div class="clearfix">
+                <form name="myForm" action="index.html"  id="myForm" method="post"  onsubmit="return check()"  >
+                    <ul class="zc-ul">
+                        <li>
+                            <em>姓名：</em><input class="text-2" type="text" id="name" name="name" value="" onblur="isName()"><span id="nameinfo"></span>
+                        </li>
+                        <li><em>手机号码：</em><input class="text-2" type="text" id="tel" name="tel" value="" onblur="isTel()"><span id="telinfo"></span></li>
+                        <li>
+                            <em>QQ：</em><input class="text-2" type="text" id="qq" name="qq" value="" placeholder="可不填"><span id="qqinfo"></span>
+                        </li>
+                        <li>
+                            <em>Email:</em><input class="text-2" type="text" id="email" name="email" value=""  onblur="isEmail()"><span id="emailinfo"></span>
+                        </li>
+                        <li>
+                            <em>性别:</em>
+                            <input class="rad_1" id="sex" type="radio" alt="性别：无内容" value="1" name="sex"/>
+                            <label for="sex">男</label>&nbsp;&nbsp;
+                            <input class="rad_1" id="sex2" type="radio" alt="性别：无内容" value="2" name="sex"/>
+                            <label for="sex">女</label>&nbsp;&nbsp;
+                        </li>
+                        <li>
+                            <em>所在地区：</em>
+                            <select name="province" id="province" alt="省份：无内容">
+                                <option selected>==选择所属省份==</option>
+                                <option value="北京">北京</option>
+                                <option value="上海">上海</option>
+                                <option value="天津">天津</option>
+                                <option value="重庆">重庆</option>
+                                <option value="安徽">安徽</option>
+                                <option value="福建">福建</option>
+                                <option value="甘肃">甘肃</option>
+                                <option value="广东">广东</option>
+                                <option value="广西">广西</option>
+                                <option value="贵州">贵州</option>
+                                <option value="海南">海南</option>
+                                <option value="河北">河北</option>
+                                <option value="黑龙江">黑龙江</option>
+                                <option value="河南">河南</option>
+                                <option value="湖北">湖北</option>
+                                <option value="湖南">湖南</option>
+                                <option value="内蒙古">内蒙古</option>
+                                <option value="江苏">江苏</option>
+                                <option value="江西">江西</option>
+                                <option value="吉林">吉林</option>
+                                <option value="辽宁">辽宁</option>
+                                <option value="宁夏">宁夏</option>
+                                <option value="青海">青海</option>
+                                <option value="山西">山西</option>
+                                <option value="陕西">陕西</option>
+                                <option value="山东">山东</option>
+                                <option value="四川">四川</option>
+                                <option value="西藏">西藏</option>
+                                <option value="新疆">新疆</option>
+                                <option value="云南">云南</option>
+                                <option value="香港">香港</option>
+                                <option value="澳门">澳门</option>
+                                <option value="台湾">台湾</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <input class="btn" type="submit" name="submit" value="联系我们"     />
+                </form>
+            </div>
+        </div>
+        <div id="container"></div>
+        <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=68c92db1b95e9f508da8670282763e32"></script>
+        <script type="text/javascript">
+            var map = new AMap.Map('container');
+            map.setZoom(15);//设置缩放级别
+            map.setCenter([116.2695662200,40.1312580041]);//设置中心坐标
+            var marker = new AMap.Marker({//创建标记
+                position: [116.2695662200,40.1312580041],//设置标记位置
+                map:map//设置map属性，使得标记能被立即添加到地图上
+            });
+            //marker.setMap();移除点标记
+            <!--创建并且设置信息窗口-->
+            AMap.plugin('AMap.AdvancedInfoWindow',function(){
+                infowindow = new AMap.AdvancedInfoWindow({
+                    content: '<div class="info-title">高德地图</div><div class="info-content">'+'我的位置。<br/>'+'</div>',//设置信息窗口内容
+                    offset: new AMap.Pixel(0, -30)//设置窗口位置相对于标记的偏移量
+                });
+                infowindow.open(map,[116.2695662200,40.1312580041]);//创建好信息窗口后，立即调用open方法，让它显示在需要的位置
+            });
+            <!--添加工具条和比例尺子-->
+            AMap.plugin(['AMap.ToolBar','AMap.Scale'],function(){//加载工具条和比例尺两个插件放到数组中
+                var toolBar = new AMap.ToolBar();//在回调函数里进行控件的生成和添加
+                var scale = new AMap.Scale();
+                map.addControl(toolBar);
+                map.addControl(scale);
+            });
+            //map.removeControl(toolBar);移除控件 </script>
+    </div>
+    <div class="footer">
+        <div class="logo">
+            <img class="footer_logo" src="images/logo.png" alt=""/>
+            <span>关注我们</span>
+            <a href="#"><img src="images/weixin.png" alt=""/></a>
+            <a href="#"><img src="images/weibo.png" alt=""/></a>
+        </div>
+        <div class="center">
+            <ul>
+                <li>
+                    <h3>新手指南</h3>
+                    <p><a href="#">购物流程</a></p>
+                    <p><a href="#">常见问题</a></p>
+                </li>
+                <li>
+                    <h3>支付方式</h3>
+                    <p><a href="#">银行卡支付</a></p>
+                    <p><a href="#">支付宝支付</a></p>
+                </li>
+                <li>
+                    <h3>售后服务</h3>
+                    <p><a href="#">退款说明</a></p>
+                    <p><a href="#">种植方式</a></p>
+                </li>
+                <li>
+                    <h3>物流配送</h3>
+                    <p><a href="#">配送方式</a></p>
+                    <p><a href="#">配送服务</a></p>
+                </li>
+                <li>
+                    <h3>关于我们</h3>
+                    <p><a href="#">联系我们</a></p>
+                    <p><a href="#">加入我们</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="erweima">
+            <a href="#"><img src="images/liantu.png" alt=""/></a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
